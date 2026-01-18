@@ -52,7 +52,7 @@ int main() {
             case 1: {
                 printf("Name(english): ");
                 fgets(temp_student.name, 30, stdin);
-                temp_student.name[strcspn(temp_student.name,'\n')]=0; // 切掉最後的換行
+                temp_student.name[strcspn(temp_student.name,"\n")]=0; // 切掉最後的換行
 
                 printf("School ID: ");
                 scanf("%s", temp_student.id);
@@ -60,7 +60,7 @@ int main() {
 
                 printf("Class name: ");
                 fgets(class_name_buffer, 100, stdin);
-                class_name_buffer[strcspn(class_name_buffer,'\n')]=0;
+                class_name_buffer[strcspn(class_name_buffer,"\n")]=0;
 
                 printf("Score: ");
                 scanf("%f", &temp_student.score);
@@ -73,7 +73,7 @@ int main() {
             case 2: {
                 printf("Enter the class you want to display: ");
                 fgets(class_name_buffer, 100, stdin);
-                class_name_buffer[strcspn(class_name_buffer,'\n')]=0;
+                class_name_buffer[strcspn(class_name_buffer,"\n")]=0;
                 display(head, class_name_buffer);
                 break;
             }
@@ -90,7 +90,7 @@ int main() {
                 while (getchar()!='\n');
                 printf("Class name: ");
                 fgets(class_name_buffer,100,stdin);
-                class_name_buffer[strcspn(class_name_buffer,'\n')]=0;
+                class_name_buffer[strcspn(class_name_buffer,"\n")]=0;
                 delete_student_from_class(head, target_id, class_name_buffer);
                 break;
             }
@@ -100,7 +100,7 @@ int main() {
                 while (getchar()!='\n');
                 printf("Class name: ");
                 fgets(class_name_buffer,100,stdin);
-                class_name_buffer[strcspn(class_name_buffer,'\n')]=0;
+                class_name_buffer[strcspn(class_name_buffer,"\n")]=0;
 
                 class_average(head, class_name_buffer);
                 int rank = get_rank(head, target_id, class_name_buffer);
